@@ -2,7 +2,6 @@
 
 Un système complet d'authentification utilisateur construit avec Flask, comprenant une inscription sécurisée, connexion, gestion des sessions et administration de profil.
 
-![Flask Auth App Banner](screenshots/banner.png)
 
 ## Table des Matières
 
@@ -102,9 +101,9 @@ Suivez ces étapes pour configurer l'application sur votre machine locale :
 ### Étape 1 : Cloner ou Télécharger le Dépôt
 
 ```bash
-git clone https://github.com/yourusername/flask-auth-app.git
+git clone https://github.com/farhaouiayoub/Mini_Projet_Flask_Ayoub-Farhaoui-IDAI.git
 # OU télécharger et extraire le fichier ZIP
-cd flask-auth-app
+cd Mini_Projet_Flask_Ayoub-Farhaoui-IDAI
 ```
 
 ### Étape 2 : Créer et Activer un Environnement Virtuel (Optionnel mais Recommandé)
