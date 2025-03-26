@@ -170,7 +170,6 @@ Par défaut, l'application sera disponible à l'adresse `http://127.0.0.1:5000/`
    - Remplissez votre email, nom d'utilisateur et mot de passe
    - Cliquez sur "S'inscrire" pour créer votre compte
 
-   ![Processus d'Inscription](screenshots/register_process.png)
 
 2. **Connexion**
    - Naviguez vers `/login` ou cliquez sur le lien "Se connecter"
@@ -178,13 +177,11 @@ Par défaut, l'application sera disponible à l'adresse `http://127.0.0.1:5000/`
    - Cochez éventuellement "Se souvenir de moi"
    - Cliquez sur "Se connecter" pour accéder à votre compte
 
-   ![Processus de Connexion](screenshots/login_process.png)
 
 3. **Voir Votre Profil**
    - Après vous être connecté, cliquez sur "Profil" dans la barre de navigation
    - Consultez les détails de votre compte incluant email, nom d'utilisateur et date d'inscription
 
-   ![Détails du Profil](screenshots/profile_details.png)
 
 4. **Modifier Votre Profil**
    - Depuis votre page de profil, cliquez sur "Modifier le Profil"
@@ -192,7 +189,6 @@ Par défaut, l'application sera disponible à l'adresse `http://127.0.0.1:5000/`
    - Pour changer votre mot de passe, entrez votre mot de passe actuel puis le nouveau mot de passe deux fois
    - Cliquez sur "Enregistrer les modifications" pour mettre à jour vos informations
 
-   ![Modification du Profil](screenshots/edit_profile_process.png)
 
 5. **Déconnexion**
    - Cliquez sur "Déconnexion" dans la barre de navigation pour terminer votre session
