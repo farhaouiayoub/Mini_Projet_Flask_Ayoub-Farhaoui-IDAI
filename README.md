@@ -1,147 +1,147 @@
-# Flask Auth App
+# Application d'Authentification Flask
 
-A complete user authentication system built with Flask, featuring secure registration, login, session management, and profile administration.
+Un système complet d'authentification utilisateur construit avec Flask, comprenant une inscription sécurisée, connexion, gestion des sessions et administration de profil.
 
 ![Flask Auth App Banner](screenshots/banner.png)
 
-## Table of Contents
+## Table des Matières
 
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Project Structure](#project-structure)
+- [Fonctionnalités](#fonctionnalités)
+- [Captures d'écran](#captures-décran)
+- [Structure du Projet](#structure-du-projet)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Technical Details](#technical-details)
-- [Future Improvements](#future-improvements)
+- [Utilisation](#utilisation)
+- [Détails Techniques](#détails-techniques)
+- [Améliorations Futures](#améliorations-futures)
 
-## Features
+## Fonctionnalités
 
-- **User Authentication**
-  - Secure registration with email validation
-  - Login with password hashing
-  - "Remember me" functionality
-  - Session management
-  - Logout capability
+- **Authentification Utilisateur**
+  - Inscription sécurisée avec validation d'email
+  - Connexion avec hachage de mot de passe
+  - Fonctionnalité "Se souvenir de moi"
+  - Gestion des sessions
+  - Déconnexion
 
-- **Profile Management**
-  - View user profile details
-  - Edit user information
-  - Change password with validation
+- **Gestion de Profil**
+  - Affichage des détails du profil utilisateur
+  - Modification des informations utilisateur
+  - Changement de mot de passe avec validation
 
-- **Security**
-  - Password hashing using Werkzeug
-  - Protected routes with login_required decorator
-  - Session security
+- **Sécurité**
+  - Hachage des mots de passe avec Werkzeug
+  - Routes protégées avec décorateur login_required
+  - Sécurité des sessions
 
-- **Performance Optimization**
-  - Session management for user state
-  - Caching system for frequently accessed data
+- **Optimisation des Performances**
+  - Gestion des sessions pour l'état utilisateur
+  - Système de cache pour les données fréquemment consultées
 
-## Screenshots
+## Captures d'écran
 
-### Registration Page
-![Registration Page](screenshots/register.png)
-*Users can create a new account with email, username, and password*
+### Page d'Inscription
+![Page d'Inscription](screenshots/register.png)
+*Les utilisateurs peuvent créer un nouveau compte avec email, nom d'utilisateur et mot de passe*
 
-### Login Page
-![Login Page](screenshots/login.png)
-*Secure login interface with "remember me" option*
+### Page de Connexion
+![Page de Connexion](screenshots/login.png)
+*Interface de connexion sécurisée avec option "se souvenir de moi"*
 
-### Profile Page
-![Profile Page](screenshots/profile.png)
-*User information displayed with auto-generated avatar*
+### Page de Profil
+![Page de Profil](screenshots/profile.png)
+*Informations utilisateur affichées avec avatar généré automatiquement*
 
-### Edit Profile
-![Edit Profile Page](screenshots/edit_profile.png)
-*Interface for updating user information and changing password*
+### Modification de Profil
+![Page de Modification de Profil](screenshots/edit_profile.png)
+*Interface pour mettre à jour les informations utilisateur et changer le mot de passe*
 
-## Project Structure
+## Structure du Projet
 
-The project follows a modular architecture for better maintainability:
+Le projet suit une architecture modulaire pour une meilleure maintenabilité :
 
 ```
 Mini_Projet_Flask/
-├── app.py                  # Application entry point
-├── config.py               # Configuration settings
-├── models/                 # Database models
+├── app.py                  # Point d'entrée de l'application
+├── config.py               # Paramètres de configuration
+├── models/                 # Modèles de base de données
 │   ├── __init__.py
-│   └── user.py             # User model definition
-├── controllers/            # Business logic
+│   └── user.py             # Définition du modèle utilisateur
+├── controllers/            # Logique métier
 │   ├── __init__.py
-│   └── auth_controller.py  # Authentication controller
-├── views/                  # Routes and views
+│   └── auth_controller.py  # Contrôleur d'authentification
+├── views/                  # Routes et vues
 │   ├── __init__.py
-│   └── auth_views.py       # Authentication routes
-├── templates/              # HTML templates
-│   ├── base.html           # Base template with common elements
-│   ├── register.html       # Registration form
-│   ├── login.html          # Login form
-│   ├── profile.html        # User profile page
-│   └── edit_profile.html   # Profile editing page
-├── static/                 # Static assets
-│   ├── css/                # CSS stylesheets
-│   │   └── style.css       # Main stylesheet
-│   └── js/                 # JavaScript files
-│       └── script.js       # Main scripts
-└── utils/                  # Utility modules
+│   └── auth_views.py       # Routes d'authentification
+├── templates/              # Templates HTML
+│   ├── base.html           # Template de base avec éléments communs
+│   ├── register.html       # Formulaire d'inscription
+│   ├── login.html          # Formulaire de connexion
+│   ├── profile.html        # Page de profil utilisateur
+│   └── edit_profile.html   # Page d'édition de profil
+├── static/                 # Ressources statiques
+│   ├── css/                # Feuilles de style CSS
+│   │   └── style.css       # Feuille de style principale
+│   └── js/                 # Fichiers JavaScript
+│       └── script.js       # Scripts principaux
+└── utils/                  # Modules utilitaires
     ├── __init__.py
-    ├── decorators.py       # Custom decorators (e.g., login_required)
-    └── cache.py            # Caching functionality
+    ├── decorators.py       # Décorateurs personnalisés (ex: login_required)
+    └── cache.py            # Fonctionnalité de cache
 ```
 
 ## Installation
 
-Follow these steps to set up the application on your local machine:
+Suivez ces étapes pour configurer l'application sur votre machine locale :
 
-### Prerequisites
+### Prérequis
 
-- Python 3.7 or higher
-- pip (Python package manager)
-- Git (optional)
+- Python 3.7 ou supérieur
+- pip (gestionnaire de paquets Python)
+- Git (optionnel)
 
-### Step 1: Clone or Download the Repository
+### Étape 1 : Cloner ou Télécharger le Dépôt
 
 ```bash
 git clone https://github.com/yourusername/flask-auth-app.git
-# OR download and extract the ZIP file
+# OU télécharger et extraire le fichier ZIP
 cd flask-auth-app
 ```
 
-### Step 2: Create and Activate a Virtual Environment (Optional but Recommended)
+### Étape 2 : Créer et Activer un Environnement Virtuel (Optionnel mais Recommandé)
 
 ```bash
-# On Windows
+# Sur Windows
 python -m venv venv
 venv\Scripts\activate
 
-# On macOS/Linux
+# Sur macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Step 3: Install Dependencies
+### Étape 3 : Installer les Dépendances
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Configure the Application
+### Étape 4 : Configurer l'Application
 
-The application is configured to use SQLite by default, which doesn't require additional setup. However, you can modify `config.py` if you need to change any settings:
+L'application est configurée pour utiliser SQLite par défaut, ce qui ne nécessite pas de configuration supplémentaire. Cependant, vous pouvez modifier `config.py` si vous devez changer des paramètres :
 
-- `SECRET_KEY`: For session security (change this in production)
-- `DATABASE_URL`: Database connection string
-- `SESSION_TYPE`: Session storage type
-- `CACHE_TYPE`: Cache storage type
+- `SECRET_KEY` : Pour la sécurité des sessions (changez-la en production)
+- `DATABASE_URL` : Chaîne de connexion à la base de données
+- `SESSION_TYPE` : Type de stockage de session
+- `CACHE_TYPE` : Type de stockage de cache
 
-### Step 5: Initialize the Database
+### Étape 5 : Initialiser la Base de Données
 
 ```bash
-# Start Python interactive shell
+# Démarrer le shell interactif Python
 python
 ```
 
-In the Python shell:
+Dans le shell Python :
 
 ```python
 from app import create_app
@@ -150,123 +150,123 @@ from models.user import db
 app = create_app()
 with app.app_context():
     db.create_all()
-    print("Database initialized successfully!")
+    print("Base de données initialisée avec succès !")
 exit()
 ```
 
-## Usage
+## Utilisation
 
-### Running the Application
+### Lancer l'Application
 
 ```bash
 python app.py
 ```
 
-By default, the application will be available at `http://127.0.0.1:5000/`
+Par défaut, l'application sera disponible à l'adresse `http://127.0.0.1:5000/`
 
-### Key Features Usage
+### Utilisation des Fonctionnalités Principales
 
-1. **Registration**
-   - Navigate to `/register` or click the "Register" link in the navigation bar
-   - Fill in your email, username, and password
-   - Click "Register" to create your account
+1. **Inscription**
+   - Naviguez vers `/register` ou cliquez sur le lien "S'inscrire" dans la barre de navigation
+   - Remplissez votre email, nom d'utilisateur et mot de passe
+   - Cliquez sur "S'inscrire" pour créer votre compte
 
-   ![Registration Process](screenshots/register_process.png)
+   ![Processus d'Inscription](screenshots/register_process.png)
 
-2. **Login**
-   - Navigate to `/login` or click the "Login" link
-   - Enter your email and password
-   - Optionally check "Remember me"
-   - Click "Login" to access your account
+2. **Connexion**
+   - Naviguez vers `/login` ou cliquez sur le lien "Se connecter"
+   - Entrez votre email et mot de passe
+   - Cochez éventuellement "Se souvenir de moi"
+   - Cliquez sur "Se connecter" pour accéder à votre compte
 
-   ![Login Process](screenshots/login_process.png)
+   ![Processus de Connexion](screenshots/login_process.png)
 
-3. **Viewing Your Profile**
-   - After logging in, click on "Profile" in the navigation bar
-   - View your account details including email, username, and registration date
+3. **Voir Votre Profil**
+   - Après vous être connecté, cliquez sur "Profil" dans la barre de navigation
+   - Consultez les détails de votre compte incluant email, nom d'utilisateur et date d'inscription
 
-   ![Profile Details](screenshots/profile_details.png)
+   ![Détails du Profil](screenshots/profile_details.png)
 
-4. **Editing Your Profile**
-   - From your profile page, click "Edit Profile"
-   - Update your username or email
-   - To change your password, enter your current password and then the new password twice
-   - Click "Save Changes" to update your information
+4. **Modifier Votre Profil**
+   - Depuis votre page de profil, cliquez sur "Modifier le Profil"
+   - Mettez à jour votre nom d'utilisateur ou email
+   - Pour changer votre mot de passe, entrez votre mot de passe actuel puis le nouveau mot de passe deux fois
+   - Cliquez sur "Enregistrer les modifications" pour mettre à jour vos informations
 
-   ![Editing Profile](screenshots/edit_profile_process.png)
+   ![Modification du Profil](screenshots/edit_profile_process.png)
 
-5. **Logging Out**
-   - Click "Logout" in the navigation bar to end your session
+5. **Déconnexion**
+   - Cliquez sur "Déconnexion" dans la barre de navigation pour terminer votre session
 
-## Technical Details
+## Détails Techniques
 
-### Session Management
+### Gestion des Sessions
 
-The application uses Flask-Session to maintain user state between HTTP requests:
+L'application utilise Flask-Session pour maintenir l'état de l'utilisateur entre les requêtes HTTP :
 
-- **Session Storage**: File-system based storage (configured in `config.py`)
-- **Session Data**: User ID and username stored upon login
-- **Session Lifetime**: 30 minutes of inactivity by default
-- **Remember Me**: Extends session persistence when checked during login
+- **Stockage de Session** : Stockage basé sur le système de fichiers (configuré dans `config.py`)
+- **Données de Session** : ID utilisateur et nom d'utilisateur stockés lors de la connexion
+- **Durée de Vie de Session** : 30 minutes d'inactivité par défaut
+- **Se Souvenir de Moi** : Prolonge la persistance de la session lorsqu'elle est cochée durant la connexion
 
-Code example from `auth_controller.py`:
+Exemple de code de `auth_controller.py` :
 ```python
-# During login
+# Durant la connexion
 session['user_id'] = user.id
 session['username'] = user.username
-session.permanent = remember  # Sets permanent session if "remember me" is checked
+session.permanent = remember  # Définit une session permanente si "se souvenir de moi" est coché
 ```
 
-### Caching System
+### Système de Cache
 
-A caching system is implemented to improve performance by reducing database queries:
+Un système de cache est implémenté pour améliorer les performances en réduisant les requêtes à la base de données :
 
-- **Cache Type**: Simple in-memory cache
-- **Cache Timeout**: 5 minutes (300 seconds) by default
-- **Cached Data**: User information stored with user ID as key
+- **Type de Cache** : Cache simple en mémoire
+- **Délai d'Expiration du Cache** : 5 minutes (300 secondes) par défaut
+- **Données Mises en Cache** : Informations utilisateur stockées avec l'ID utilisateur comme clé
 
-Code example from `auth_controller.py`:
+Exemple de code de `auth_controller.py` :
 ```python
-# Storing user data in cache
+# Stockage des données utilisateur dans le cache
 cache.set(f'user_{user.id}', user.to_dict(), timeout=300)
 
-# Retrieving user data from cache
+# Récupération des données utilisateur depuis le cache
 cached_user = cache.get(f'user_{user_id}')
 if cached_user:
     return cached_user
 ```
 
-### Security Features
+### Fonctionnalités de Sécurité
 
-- **Password Hashing**: Uses Werkzeug's security functions to hash passwords before storage
-- **Protected Routes**: Uses a custom `login_required` decorator to protect private routes
-- **Form Validation**: Client and server-side validation for all form submissions
-- **Password Strength Meter**: Visual feedback on password strength during registration and password change
+- **Hachage de Mot de Passe** : Utilise les fonctions de sécurité de Werkzeug pour hacher les mots de passe avant stockage
+- **Routes Protégées** : Utilise un décorateur personnalisé `login_required` pour protéger les routes privées
+- **Validation de Formulaire** : Validation côté client et serveur pour toutes les soumissions de formulaire
+- **Indicateur de Force du Mot de Passe** : Retour visuel sur la force du mot de passe lors de l'inscription et du changement de mot de passe
 
-## Future Improvements
+## Améliorations Futures
 
-Potential enhancements for the project:
+Améliorations potentielles pour le projet :
 
-- **Advanced Session Storage**: Replace file-system sessions with Redis for better scalability
-- **Distributed Caching**: Implement a distributed cache solution for improved performance
-- **Additional Security**: Add CSRF protection and two-factor authentication
-- **Password Recovery**: Implement a password reset feature with email confirmation
-- **User Roles**: Add role-based access control for different user types
-- **API Development**: Create RESTful APIs for mobile application integration
+- **Stockage de Session Avancé** : Remplacer les sessions basées sur le système de fichiers par Redis pour une meilleure scalabilité
+- **Cache Distribué** : Implémenter une solution de cache distribué pour de meilleures performances
+- **Sécurité Supplémentaire** : Ajouter la protection CSRF et l'authentification à deux facteurs
+- **Récupération de Mot de Passe** : Implémenter une fonctionnalité de réinitialisation de mot de passe avec confirmation par email
+- **Rôles Utilisateur** : Ajouter un contrôle d'accès basé sur les rôles pour différents types d'utilisateurs
+- **Développement d'API** : Créer des API RESTful pour l'intégration d'applications mobiles
 
 ---
 
-## Contributing
+## Contribuer
 
-If you'd like to contribute to this project, please follow these steps:
+Si vous souhaitez contribuer à ce projet, veuillez suivre ces étapes :
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature-name`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add some feature'`)
-5. Push to the branch (`git push origin feature/your-feature-name`)
-6. Open a Pull Request
+1. Forkez le dépôt
+2. Créez une nouvelle branche (`git checkout -b feature/votre-fonctionnalité`)
+3. Faites vos modifications
+4. Committez vos changements (`git commit -m 'Ajout d'une fonctionnalité'`)
+5. Poussez vers la branche (`git push origin feature/votre-fonctionnalité`)
+6. Ouvrez une Pull Request
 
-## License
+## Licence
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
