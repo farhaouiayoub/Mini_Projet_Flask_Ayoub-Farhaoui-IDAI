@@ -59,7 +59,7 @@ Un système complet d'authentification utilisateur construit avec Flask, compren
 Le projet suit une architecture modulaire pour une meilleure maintenabilité :
 
 ```
-Mini_Projet_Flask/
+Mini_Projet_Flask_Ayoub-Farhaoui-IDAI/
 ├── app.py                  # Point d'entrée de l'application
 ├── config.py               # Paramètres de configuration
 ├── models/                 # Modèles de base de données
@@ -82,10 +82,15 @@ Mini_Projet_Flask/
 │   │   └── style.css       # Feuille de style principale
 │   └── js/                 # Fichiers JavaScript
 │       └── script.js       # Scripts principaux
-└── utils/                  # Modules utilitaires
-    ├── __init__.py
-    ├── decorators.py       # Décorateurs personnalisés (ex: login_required)
-    └── cache.py            # Fonctionnalité de cache
+├── utils/                  # Modules utilitaires
+│   ├── __init__.py
+│   ├── decorators.py       # Décorateurs personnalisés (ex: login_required)
+│   └── cache.py            # Fonctionnalité de cache
+├── Rapport/                # Dossier pour les rapports
+│   ├── Rapport de Projet.docx
+│   └── Rapport de Projet.pdf
+├── README.md               # Documentation du projet
+└── requirements.txt        # Dépendances Python
 ```
 
 ## Installation
@@ -262,6 +267,3 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre ces étapes :
 5. Poussez vers la branche (`git push origin feature/votre-fonctionnalité`)
 6. Ouvrez une Pull Request
 
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
